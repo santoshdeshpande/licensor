@@ -18,6 +18,7 @@ defmodule LicensorWeb.Router do
     pipe_through :browser
 
     live "/", PageLive, :index
+    resources "/orgs", OrganizationController, only: [:index, :new, :create]
   end
 
   # Other scopes may use custom stacks.
